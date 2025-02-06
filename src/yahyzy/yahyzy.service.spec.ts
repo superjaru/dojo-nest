@@ -60,6 +60,48 @@ describe('Successul case', () => {
 
     expect(result).toBe(test);
   });
+
+  it('ทอยได้หน้า [2,1,2,1,2] โดยให้ target มีค่า 3 และผลรวมมีค่า 8', () => {
+    const dice = [2, 1, 2, 1, 2];
+    const target = 3;
+    const result = 8;
+    const test = service.sumDiceByKind(dice, target);
+
+    expect(result).toBe(test);
+  });
+  it('ทอยได้หน้า [1,1,2,2,2] โดยให้ target มีค่า 3 และผลรวมมีค่า 8', () => {
+    const dice = [1, 1, 2, 2, 2];
+    const target = 3;
+    const result = 8;
+    const test = service.sumDiceByKind(dice, target);
+
+    expect(result).toBe(test);
+  });
+  // X Kind of card
+  it('ทอยได้หน้า [4,4,4,4,1] โดยให้ target มีค่า 4 และผลรวมมีค่า 17', () => {
+    const dice = [4, 4, 4, 4, 1];
+    const target = 4;
+    const result = 17;
+    const test = service.sumDiceByKind(dice, target);
+
+    expect(result).toBe(test);
+  });
+   // X Kind of card
+  it('ทอยได้หน้า [4,4,1,4,4] โดยให้ target มีค่า 4 และผลรวมมีค่า 17', () => {
+    const dice = [4, 4, 1, 4, 4];
+    const target = 4;
+    const result = 17;
+    const test = service.sumDiceByKind(dice, target);
+
+    expect(result).toBe(test);
+  });
+  it('ทอยได้หน้า [2,2,3,3,3] โดยให้ target  และผลรวมมีค่า 13', () => {
+    const dice = [2,2,3,3,3];
+    const result = 13;
+    const test = service.sumDiceByChance(dice);
+
+    expect(result).toBe(test);
+  });
 });
 
 describe('Alternative case', () => {
